@@ -1,86 +1,101 @@
-.body{
+.body {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100vh;
+  background-color: darkgrey;
 }
 
-.main{
+:root {
+  --bg-logo: #F9F9F9;
+  --bg-green: lightgreen;
+  --bg-blue: lightblue;
+  --bg-door: beige;
+  --bg-red: #A61C1C;
+  --bg-text: #828282;
+  --bg-coffee: brown;
+  --bg-brown: #A6806B;
+}
+
+.main {
   height: 100%;
 }
 
-.main_content{
+.main_content {
   display: grid;
   grid-template-columns: 458px 199px 165px 226px 232px;
   grid-template-rows: 288px 185px 247px;
-  grid-template-areas: 
-  "logo pic-girl-1 pic-girl-1 pic-girl-2 pic-girl-3"
-  "logo-2 pic-girl-1 pic-girl-1 pic-door pic-red"
-  "text pic-coffee pic-brown pic-door pic-man";
+  grid-template-areas:
+    "logo pic-girl-1 pic-girl-1 pic-girl-2 pic-girl-3"
+    "logo-2 pic-girl-1 pic-girl-1 pic-door pic-red"
+    "text pic-coffee pic-brown pic-door pic-man";
   width: 100%;
   height: 100%;
 }
 
 .logo {
-  background-color: #F9F9F9;
+  background-color: var(--bg-logo);
   grid-area: logo;
 }
-.logo-2{
-  background-color: #F9F9F9;
+
+.logo-2 {
+  background-color: var(--bg-logo);
   grid-area: logo-2;
 }
 
 .pic-girl-1 {
-  background-color: lightgreen;
+  background-color: var(--bg-green);
   grid-area: pic-girl-1;
 }
+
 .pic-girl-2 {
-  background-color: lightblue;
+  background-color: var(--bg-blue);
   grid-area: pic-girl-2;
 }
+
 .pic-girl-3 {
-  background-color: green;
+  background-color: var(--bg-green);
   grid-area: pic-girl-3;
 }
-.pic-door{
-  background-color: beige;
-  grid-area: pic-door;
-}
-.pic-red{
-  background-color: #A61C1C;
-  grid-area: pic-red;
-}
-.text{
-  background-color:#828282;
-  grid-area: text;
-}
-.pic-coffee{
-  background-color: brown;
-  grid-area: pic-coffee;
-}
-.pic-door{
-  background-color: lightsalmon;
+
+.pic-door {
+  background-color: var(--bg-door);
   grid-area: pic-door;
 }
 
-.pic-brown{
-  background-color: #A6806B;
+.pic-red {
+  background-color: var(--bg-red);
+  grid-area: pic-red;
+}
+
+.text {
+  background-color: var(--bg-text);
+  grid-area: text;
+}
+
+.pic-coffee {
+  background-color: var(--bg-coffee);
+  grid-area: pic-coffee;
+}
+
+.pic-brown {
+  background-color: var(--bg-brown);
   grid-area: pic-brown;
 }
 
-.pic-man{
-  background-color: purple;
+.pic-man {
+  background-color: var(--bg-green);
   grid-area: pic-man;
 }
 
-.image{
+.image {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.icon-wrapper{
+.icon-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -88,7 +103,7 @@
   padding: 114px 177px 48px 158px;
 }
 
-.ico{
+.ico {
   cursor: pointer;
 }
 
@@ -97,11 +112,11 @@
   transition: 0.2s;
 }
 
-.grid-element{
+.grid-element {
   overflow: hidden;
 }
 
-.logo-text{
+.logo-text {
   font-family: 'Inter', sans-serif;
   font-size: 64px;
   font-weight: 600;
@@ -111,8 +126,8 @@
   padding: 125px 63px 0px 67px;
 }
 
-.sample-text{
-  color:#F2F2F2;
+.sample-text {
+  color: #F2F2F2;
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -123,75 +138,75 @@
 }
 
 @media screen and (max-width: 1279px) {
-  .main_content{
+  .main_content {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "logo logo pic-girl-1 pic-girl-1 pic-girl-2"
-    "logo-2 logo-2 pic-girl-1 pic-girl-1 pic-door"
-    "text text pic-coffee pic-brown pic-door"
-    "pic-girl-3 pic-red pic-red pic-red pic-man";
+    grid-template-areas:
+      "logo logo pic-girl-1 pic-girl-1 pic-girl-2"
+      "logo-2 logo-2 pic-girl-1 pic-girl-1 pic-door"
+      "text text pic-coffee pic-brown pic-door"
+      "pic-girl-3 pic-red pic-red pic-red pic-man";
   }
 
-  .main{
+  .main {
     height: auto;
   }
 
   .logo-text {
     padding: 125px 63px 0px 45px;
-}
+  }
 
-.icon-wrapper{
-  padding: 0;
-  padding-top: 64px;
-  gap: 5px;
-  width: 100%;
-  justify-content: center;
-  gap: 32px;
-}
+  .icon-wrapper {
+    padding: 0;
+    padding-top: 64px;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    gap: 32px;
+  }
 
 }
 
 @media screen and (max-width: 991px) {
-  .main_content{
+  .main_content {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "logo logo pic-girl-1 pic-girl-1"
-    "logo-2 logo-2 pic-girl-1 pic-girl-1"
-    "text text pic-coffee pic-brown"
-    "pic-girl-3 pic-red pic-man pic-door"
-    "pic-girl-2 pic-red pic-man pic-door";
+    grid-template-areas:
+      "logo logo pic-girl-1 pic-girl-1"
+      "logo-2 logo-2 pic-girl-1 pic-girl-1"
+      "text text pic-coffee pic-brown"
+      "pic-girl-3 pic-red pic-man pic-door"
+      "pic-girl-2 pic-red pic-man pic-door";
   }
 }
 
 @media screen and (max-width: 767px) {
-  .main_content{
+  .main_content {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px 100px 200px 1fr 0.5fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "logo logo"
-    "logo-2 logo-2"
-    "text text"
-    "pic-girl-1 pic-girl-1"
-    "pic-coffee pic-brown"
-    "pic-girl-2 pic-red"
-    "pic-girl-3 pic-red"
-    "pic-door pic-man";
+    grid-template-areas:
+      "logo logo"
+      "logo-2 logo-2"
+      "text text"
+      "pic-girl-1 pic-girl-1"
+      "pic-coffee pic-brown"
+      "pic-girl-2 pic-red"
+      "pic-girl-3 pic-red"
+      "pic-door pic-man";
   }
 
-  .logo-text{
+  .logo-text {
     font-size: 48px;
     padding: 32px;
     text-align: center;
   }
 
-  .icon-wrapper{
+  .icon-wrapper {
     padding: 0;
     padding-top: 16px;
   }
 
-  .sample-text{
+  .sample-text {
     padding: 32px;
   }
 }
