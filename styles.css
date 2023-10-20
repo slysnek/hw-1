@@ -127,16 +127,16 @@
 @media screen and (max-width: 767px) {
   .main-content {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 100px 200px 1fr 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 100px 200px 1fr 0.5fr 0.5fr 0.5fr 1fr;
     grid-template-areas:
       "logo logo"
       "logo-2 logo-2"
       "text text"
       "pic-girl-1 pic-girl-1"
       "pic-coffee pic-brown"
-      "pic-girl-2 pic-red"
-      "pic-girl-3 pic-red"
-      "pic-door pic-man";
+      "pic-red pic-girl-2"
+      "pic-red pic-girl-3"
+      "pic-man pic-door";
   }
 
   .logo__text {
